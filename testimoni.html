@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimoni - Douxnat Lovers</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .testi-page {
+            padding: 120px 20px 60px;
+            background-color: #fff5f7;
+            text-align: center;
+        }
+        .testi-header h2 {
+            color: #d14a79;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        .testi-header p {
+            color: #666;
+            margin-bottom: 50px;
+        }
+        .testi-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .testi-card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(209, 74, 121, 0.05);
+            transition: 0.3s;
+            position: relative;
+        }
+        .testi-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(209, 74, 121, 0.1);
+        }
+        .profile-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 3px solid #f178a3;
+        }
+        .testi-name {
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 5px;
+            display: block;
+        }
+        .testi-stars {
+            color: #ffb400;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+        .testi-text {
+            color: #555;
+            font-style: italic;
+            line-height: 1.6;
+        }
+        .quote-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 40px;
+            color: #fff0f3;
+            z-index: 0;
+        }
+        .testi-content {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" alt="Douxnat Logo">
+                <h1>Douxnat</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#menu">Menu</a></li>
+                <li><a href="testimoni.html" style="color: #d14a79; font-weight: bold;">Testimoni</a></li>
+                <li><a href="index.html#promo">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="testi-page">
+        <div class="testi-header">
+            <h2>Apa Kata Mereka? ✨</h2>
+            <p>Cerita manis dari para pecinta Douxnat di seluruh Indonesia.</p>
+        </div>
+
+        <div class="testi-container">
+            <div class="testi-card">
+                <span class="quote-icon">"</span>
+                <div class="testi-content">
+                    <img src="https://i.pravatar.cc/150?u=sarah" alt="Sarah" class="profile-img">
+                    <span class="testi-name">Sarah Amelia</span>
+                    <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testi-text">"Donat terlembut yang pernah aku coba! Varian Taro-nya beneran nagih dan nggak terlalu manis. Pas banget buat nemenin ngopi sore."</p>
+                </div>
+            </div>
+
+            <div class="testi-card">
+                <span class="quote-icon">"</span>
+                <div class="testi-content">
+                    <img src="https://i.pravatar.cc/150?u=budi" alt="Budi" class="profile-img">
+                    <span class="testi-name">Budi Santoso</span>
+                    <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testi-text">"Anak-anak suka banget sama Douxnat Monster. Desainnya lucu dan rasanya beneran premium. Pelayanannya juga cepet banget!"</p>
+                </div>
+            </div>
+
+            <div class="testi-card">
+                <span class="quote-icon">"</span>
+                <div class="testi-content">
+                    <img src="https://i.pravatar.cc/150?u=linda" alt="Linda" class="profile-img">
+                    <span class="testi-name">Linda Wijaya</span>
+                    <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testi-text">"Harganya sangat terjangkau untuk kualitas rasa semewah ini. Packaging-nya juga rapi dan aman buat dikirim ke luar kota."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="write-testi" style="max-width: 600px; margin: 80px auto; background: white; padding: 40px; border-radius: 30px; box-shadow: 0 20px 40px rgba(0,0,0,0.05);">
+        <h3 style="color: #d14a79; margin-bottom: 20px;">Bagikan Pengalaman Manismu ✨</h3>
+        <form id="testiForm" onsubmit="handleTestiSubmit(event)">
+            <div style="margin-bottom: 15px; text-align: left;">
+                <label style="display:block; margin-bottom: 5px; font-size: 14px;">Nama Lengkap</label>
+                <input type="text" id="testiName" required style="width: 100%; padding: 12px; border: 1px solid #eee; border-radius: 10px;">
+            </div>
+            <div style="margin-bottom: 15px; text-align: left;">
+                <label style="display:block; margin-bottom: 5px; font-size: 14px;">Rating</label>
+                <select id="testiRating" style="width: 100%; padding: 12px; border: 1px solid #eee; border-radius: 10px;">
+                    <option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐ (Sangat Puas)</option>
+                    <option value="⭐⭐⭐⭐">⭐⭐⭐⭐ (Puas)</option>
+                    <option value="⭐⭐⭐">⭐⭐⭐ (Cukup)</option>
+                </select>
+            </div>
+            <div style="margin-bottom: 20px; text-align: left;">
+                <label style="display:block; margin-bottom: 5px; font-size: 14px;">Komentar</label>
+                <textarea id="testiComment" required style="width: 100%; padding: 12px; border: 1px solid #eee; border-radius: 10px; height: 100px;"></textarea>
+            </div>
+            <button type="submit" style="width: 100%; background: #d14a79; color: white; border: none; padding: 15px; border-radius: 12px; font-weight: bold; cursor: pointer; transition: 0.3s;">
+                Kirim Testimoni
+            </button>
+        </form>
+    </section>
+    
+    <script>
+    function handleTestiSubmit(event) {
+        event.preventDefault();
+        const nama = document.getElementById('testiName').value;
+        const rating = document.getElementById('testiRating').value;
+        const komen = document.getElementById('testiComment').value;
+    
+        alert(`Terima kasih Kak ${nama}! Testimoni kamu telah terkirim dan akan segera kami tampilkan.`);
+        
+        // Reset form
+        document.getElementById('testiForm').reset();
+    }
+    </script>
+
+    <footer id="contact">
+        <p>&copy; 2025 Douxnat. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

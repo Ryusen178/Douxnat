@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Douxnat - Sweet Donuts</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" alt="Douxnat Logo">
+                <h1>Douxnat</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#promo">Promo</a></li>
+                <li><a href="#contact">Kontak</a></li>
+                <li><a href="testimoni.html">Testimoni</a></li>
+                <li class="cart-nav" onclick="toggleCart()" style="cursor: pointer; position: relative;">
+                    <span id="cart-count" style="background: #d14a79; color: white; padding: 2px 6px; border-radius: 50%; font-size: 12px; position: absolute; top: -10px; right: -10px;">0</span>
+                    <i class="cart-icon">🛒</i>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-text">
+            <h2>Sweet • Soft • Lovely</h2>
+            <p>Donat lembut dengan topping premium khas Douxnat. Manisnya seperti valentine terus!</p>
+            <a href="#menu" class="btn-primary">Lihat Menu</a>
+        </div>
+        <div class="hero-img">
+            <img src="images/logo.png" alt="Douxnat Donut">
+        </div>
+    </section>
+
+    <section id="menu" class="menu-section">
+        <h2>Menu Favorit</h2>
+        <div class="menu-grid">
+
+            <div class="menu-card">
+                <div class="menu-img-container">
+                    <img src="images/taro.jpeg" alt="Taro">
+                </div>
+                <div class="menu-info">
+                    <h3>Douxnat Taro</h3>
+                    <p>Warna ungu elegan yang sedang populer.</p>
+                    <span class="price">Rp 9.000</span>
+                </div>
+                <button class="add-to-cart-btn" onclick="addToCart('Taro', 9000)">Tambah ke Keranjang</button>
+            </div>
+
+            <div class="menu-card">
+                <div class="menu-img-container">
+                    <img src="images/monster.jpeg" alt="Monster">
+                </div>
+                <div class="menu-info">
+                    <h3>Douxnat Monster</h3>
+                    <p>Glaze biru cerah dengan dekorasi mata yang lucu.</p>
+                    <span class="price">Rp 13.000</span>
+                </div>
+                <button class="add-to-cart-btn" onclick="addToCart('Monster', 13000)">Tambah ke Keranjang</button>
+            </div>
+
+            <div class="menu-card">
+                <div class="menu-img-container">
+                    <img src="images/berry.jpeg" alt="Berry Bliss">
+                </div>
+                <div class="menu-info">
+                    <h3>Berry Bliss</h3>
+                    <p>Perpaduan manis dan asam selai berry fresh.</p>
+                    <span class="price">Rp 9.000</span>
+                </div>
+                <button class="add-to-cart-btn" onclick="addToCart('Berry Bliss', 9000)">Tambah ke Keranjang</button>
+            </div>
+
+            <div class="menu-card">
+                <div class="menu-img-container">
+                    <img src="images/blue.jpeg" alt="Sprinkle Blue">
+                </div>
+                <div class="menu-info">
+                    <h3>Sprinkle Blue</h3>
+                    <p>Glaze biru cantik dengan taburan meses putih.</p>
+                    <span class="price">Rp 9.000</span>
+                </div>
+                <button class="add-to-cart-btn" onclick="addToCart('Sprinkle Blue', 9000)">Tambah ke Keranjang</button>
+            </div>
+
+            <div class="menu-card">
+                <div class="menu-img-container">
+                    <img src="images/bubblegum.jpeg" alt="Bubblegum">
+                </div>
+                <div class="menu-info">
+                    <h3>Bubblegum</h3>
+                    <p>Rasa permen karet yang manis dan nostalgik.</p>
+                    <span class="price">Rp 9.000</span>
+                </div>
+                <button class="add-to-cart-btn" onclick="addToCart('Bubblegum', 9000)">Tambah ke Keranjang</button>
+            </div>
+
+            <div class="menu-card">
+                <div class="menu-img-container">
+                    <img src="images/choco.jpeg" alt="Double Choco">
+                </div>
+                <div class="menu-info">
+                    <h3>Double Choco</h3>
+                    <p>Lapisan cokelat hitam kaya rasa dan kuat.</p>
+                    <span class="price">Rp 9.000</span>
+                </div>
+                <button class="add-to-cart-btn" onclick="addToCart('Double Choco', 9000)">Tambah ke Keranjang</button>
+            </div>
+
+            <div class="menu-card">
+                <div class="menu-img-container">
+                    <img src="images/cookie.jpeg" alt="Cream Cookie">
+                </div>
+                <div class="menu-info">
+                    <h3>Cream Cookie</h3>
+                    <p>Sensasi rasa cookies and cream yang lezat.</p>
+                    <span class="price">Rp 9.000</span>
+                </div>
+                <button class="add-to-cart-btn" onclick="addToCart('Cream Cookie', 9000)">Tambah ke Keranjang</button>
+            </div>
+
+            <div class="menu-card">
+                <div class="menu-img-container">
+                    <img src="images/glaze.jpeg" alt="Sugar Glaze">
+                </div>
+                <div class="menu-info">
+                    <h3>Sugar Glaze</h3>
+                    <p>Varian klasik yang manis dan lembut di mulut.</p>
+                    <span class="price">Rp 9.000</span>
+                </div>
+                <button class="add-to-cart-btn" onclick="addToCart('Sugar Glaze', 9000)">Tambah ke Keranjang</button>
+            </div>
+
+            <div class="menu-card">
+                <div class="menu-img-container">
+                    <img src="images/hazelnut.jpeg" alt="Hazelnut">
+                </div>
+                <div class="menu-info">
+                    <h3>Hazelnut Jam</h3>
+                    <p>Selai kacang yang manis, gurih, dan nagih.</p>
+                    <span class="price">Rp 9.000</span>
+                </div>
+                <button class="add-to-cart-btn" onclick="addToCart('Hazelnut Jam', 9000)">Tambah ke Keranjang</button>
+            </div>
+
+            <div class="menu-card">
+                <div class="menu-img-container">
+                    <img src="images/matcha.jpeg" alt="Matcha">
+                </div>
+                <div class="menu-info">
+                    <h3>Nut Matcha</h3>
+                    <p>Matcha premium dengan sedikit rasa pahit otentik.</p>
+                    <span class="price">Rp 9.000</span>
+                </div>
+                <button class="add-to-cart-btn" onclick="addToCart('Nut Matcha', 9000)">Tambah ke Keranjang</button>
+            </div>
+
+            <div class="menu-card">
+                <div class="menu-img-container">
+                    <img src="images/pink.jpeg" alt="Pink">
+                </div>
+                <div class="menu-info">
+                    <h3>Sprinkle Pink</h3>
+                    <p>Glaze pink cantik dengan meses putih premium.</p>
+                    <span class="price">Rp 9.000</span>
+                </div>
+                <button class="add-to-cart-btn" onclick="addToCart('Sprinkle Pink', 9000)">Tambah ke Keranjang</button>
+            </div>
+
+            <div class="menu-card">
+                <div class="menu-img-container">
+                    <img src="images/rainbow.jpeg" alt="Rainbow">
+                </div>
+                <div class="menu-info">
+                    <h3>Rainbow Sprinkle</h3>
+                    <p>Warna-warni ceria yang menutupi seluruh donat.</p>
+                    <span class="price">Rp 9.000</span>
+                </div>
+                <button class="add-to-cart-btn" onclick="addToCart('Rainbow Sprinkle', 9000)">Tambah ke Keranjang</button>
+            </div>
+
+            <div class="menu-card">
+                <div class="menu-img-container">
+                    <img src="images/sprinkle.jpeg" alt="Choco Sprinkle">
+                </div>
+                <div class="menu-info">
+                    <h3>Chocolate Sprinkle</h3>
+                    <p>Glaze cokelat klasik dengan taburan meses.</p>
+                    <span class="price">Rp 9.000</span>
+                </div>
+                <button class="add-to-cart-btn" onclick="addToCart('Choco Sprinkle', 9000)">Tambah ke Keranjang</button>
+            </div>
+
+            <div class="menu-card">
+                <div class="menu-img-container">
+                    <img src="images/tiramisu.jpeg" alt="Tiramisu">
+                </div>
+                <div class="menu-info">
+                    <h3>Almond Tiramisu</h3>
+                    <p>Rasa tiramisu mewah dengan kacang almond renyah.</p>
+                    <span class="price">Rp 9.000</span>
+                </div>
+                <button class="add-to-cart-btn" onclick="addToCart('Almond Tiramisu', 9000)">Tambah ke Keranjang</button>
+            </div>
+
+            <div class="menu-card">
+                <div class="menu-img-container">
+                    <img src="images/vanila.jpeg" alt="Vanila">
+                </div>
+                <div class="menu-info">
+                    <h3>Vanila</h3>
+                    <p>Manis lembut seperti suasana musim semi.</p>
+                    <span class="price">Rp 9.000</span>
+                </div>
+                <button class="add-to-cart-btn" onclick="addToCart('Vanila', 9000)">Tambah ke Keranjang</button>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="promo" class="promo-section">
+        <div class="promo-container">
+            <div class="promo-content">
+                <div class="promo-badge">Penawaran Terbatas!</div>
+                <h2>Promo Spesial Valentine ✨</h2>
+                <p>Nikmati kelembutan Douxnat dengan paket hemat: <strong>Beli 4 Gratis 1</strong> untuk semua varian rasa.</p>
+                <div class="promo-timer">Berlaku hingga akhir bulan ini</div>
+                <a href="#menu" class="btn-promo">Pesan Sekarang</a>
+            </div>
+        </div>
+    </section>
+    
+    <footer id="contact">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="images/logo.png" alt="Logo">
+                <h3>Douxnat</h3>
+                <p>Manisnya seperti valentine terus!</p>
+            </div>
+            
+            <div class="footer-info">
+                <h4>Hubungi Kami</h4>
+                <a href="https://wa.me/628123456789" target="_blank">
+                    <span>📱 WhatsApp:</span> 0812-3456-7890
+                </a>
+                <a href="https://instagram.com/douxnat.id" target="_blank">
+                    <span>📸 Instagram:</span> @douxnat.id
+                </a>
+            </div>
+    
+            <div class="footer-links">
+                <h4>Navigasi</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#promo">Promo</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Douxnat. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <div class="floating-cart" onclick="toggleCart()" style="position: fixed; bottom: 20px; right: 20px; cursor: pointer; z-index: 1000;">
+        <div style="position: relative;">
+            <button style="background: #a42f60; border: none; border-radius: 50%; width: 60px; height: 60px; color: white; font-size: 24px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center;">🛒</button>
+            <span class="cart-count-badge" style="position: absolute; top: 0; right: 0; background: #d14a79; color: white; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: bold; border: 2px solid white;">0</span>
+        </div>
+    </div>
+
+    <div id="cartModal" class="cart-modal" style="display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6);">
+        <div class="cart-content" style="background: white; margin: 5% auto; padding: 25px; width: 90%; max-width: 450px; border-radius: 20px; position: relative; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+            <span class="close" onclick="toggleCart()" style="position: absolute; right: 20px; top: 15px; font-size: 28px; cursor: pointer; color: #aaa;">&times;</span>
+            
+            <div id="cartMainView">
+                <h2 style="color: #d14a79; margin-bottom: 20px;">Keranjang Belanja</h2>
+                <div id="cartItemsList" style="max-height: 250px; overflow-y: auto; margin-bottom: 20px;"></div>
+                <div style="display: flex; justify-content: space-between; font-weight: bold; font-size: 18px; border-top: 2px solid #f8f8f8; padding-top: 15px;">
+                    <span>Total:</span>
+                    <span id="cartTotalPrice" style="color: #d14a79;">Rp 0</span>
+                </div>
+                <button onclick="showCheckout()" style="width: 100%; background: #d14a79; color: white; border: none; padding: 14px; border-radius: 12px; margin-top: 20px; font-weight: 600; cursor: pointer;">
+                    Lanjut ke Pembayaran
+                </button>
+            </div>
+    
+            <div id="checkoutSection" style="display: none;">
+                <h2 style="color: #d14a79; margin-bottom: 15px;">Detail Pengiriman</h2>
+                <div style="margin-bottom: 15px;">
+                    <label style="display:block; font-size: 12px; margin-bottom: 5px;">Nama Lengkap</label>
+                    <input type="text" id="buyerName" placeholder="Nama penerima" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px;">
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <label style="display:block; font-size: 12px; margin-bottom: 5px;">Alamat Lengkap</label>
+                    <textarea id="buyerAddress" placeholder="Jl. Nama Jalan, No Rumah, Kelurahan" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px; height: 80px;"></textarea>
+                </div>
+                
+                <div style="background: #fff5f7; padding: 15px; border-radius: 10px; border: 1px dashed #d14a79; margin-bottom: 20px;">
+                    <strong style="display: block; color: #d14a79; margin-bottom: 5px;">Informasi Transfer:</strong>
+                    <p style="margin: 0; font-size: 14px;">Bank BCA: <strong>123-456-7890</strong></p>
+                    <p style="margin: 0; font-size: 14px;">A/N: <strong>Douxnat Bakery</strong></p>
+                </div>
+    
+                <div style="display: flex; gap: 10px;">
+                    <button onclick="hideCheckout()" style="flex: 1; background: #eee; border: none; padding: 12px; border-radius: 10px; cursor: pointer;">Kembali</button>
+                    <button onclick="processFinalOrder()" style="flex: 2; background: #25D366; color: white; border: none; padding: 12px; border-radius: 10px; font-weight: bold; cursor: pointer;">Konfirmasi & Kirim Bukti</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
